@@ -1,0 +1,226 @@
+import spacy
+from spacy import displacy
+
+nlp = spacy.load("en_core_web_sm")
+
+multiline_text = """
+Artificial intelligence is transforming the way we interact with technology. 
+From voice assistants to recommendation systems, AI applications are becoming increasingly integrated into our daily lives.
+"""
+
+multiline_doc = nlp(multiline_text)
+
+for token in multiline_doc:
+    print(
+        f"""
+TOKEN: {token.text}
+=====
+{token.tag_ = }
+{token.head.text = }
+{token.dep_ = }"""
+    )
+
+displacy.serve(multiline_doc, style="dep")
+
+
+output:
+
+PS C:\Users\jaypu> & C:/Users/jaypu/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/jaypu/Desktop/assignment 06.py"
+
+TOKEN: 
+
+=====
+token.tag_ = '_SP'
+token.head.text = 'Artificial'
+token.dep_ = 'dep'
+
+TOKEN: Artificial
+=====
+token.tag_ = 'JJ'
+token.head.text = 'intelligence'
+token.dep_ = 'amod'
+
+TOKEN: intelligence
+=====
+token.tag_ = 'NN'
+token.head.text = 'transforming'
+token.dep_ = 'nsubj'
+
+TOKEN: is
+=====
+token.tag_ = 'VBZ'
+token.head.text = 'transforming'
+token.dep_ = 'aux'
+
+TOKEN: transforming
+=====
+token.tag_ = 'VBG'
+token.head.text = 'transforming'
+token.dep_ = 'ROOT'
+
+TOKEN: the
+=====
+token.tag_ = 'DT'
+token.head.text = 'way'
+token.dep_ = 'det'
+
+TOKEN: way
+=====
+token.tag_ = 'NN'
+token.head.text = 'transforming'
+token.dep_ = 'dobj'
+
+TOKEN: we
+=====
+token.tag_ = 'PRP'
+token.head.text = 'interact'
+token.dep_ = 'nsubj'
+
+TOKEN: interact
+=====
+token.tag_ = 'VBP'
+token.head.text = 'way'
+token.dep_ = 'relcl'
+
+TOKEN: with
+=====
+token.tag_ = 'IN'
+token.head.text = 'interact'
+token.dep_ = 'prep'
+
+TOKEN: technology
+=====
+token.tag_ = 'NN'
+token.head.text = 'with'
+token.dep_ = 'pobj'
+
+TOKEN: .
+=====
+token.tag_ = '.'
+token.head.text = 'transforming'
+token.dep_ = 'punct'
+
+TOKEN:
+
+=====
+token.tag_ = '_SP'
+token.head.text = '.'
+token.dep_ = 'dep'
+
+TOKEN: From
+=====
+token.tag_ = 'IN'
+token.head.text = 'integrated'
+token.dep_ = 'prep'
+
+TOKEN: voice
+=====
+token.tag_ = 'NN'
+token.head.text = 'assistants'
+token.dep_ = 'compound'
+
+TOKEN: assistants
+=====
+token.tag_ = 'NNS'
+token.head.text = 'From'
+token.dep_ = 'pobj'
+
+TOKEN: to
+=====
+token.tag_ = 'IN'
+token.head.text = 'From'
+token.dep_ = 'prep'
+
+TOKEN: recommendation
+=====
+token.tag_ = 'NN'
+token.head.text = 'systems'
+token.dep_ = 'compound'
+
+TOKEN: systems
+=====
+token.tag_ = 'NNS'
+token.head.text = 'to'
+token.dep_ = 'pobj'
+
+TOKEN: ,
+=====
+token.tag_ = ','
+token.head.text = 'integrated'
+token.dep_ = 'punct'
+
+TOKEN: AI
+=====
+token.tag_ = 'NNP'
+token.head.text = 'applications'
+token.dep_ = 'compound'
+
+TOKEN: applications
+=====
+token.tag_ = 'NNS'
+token.head.text = 'integrated'
+token.dep_ = 'nsubjpass'
+
+TOKEN: are
+=====
+token.tag_ = 'VBP'
+token.head.text = 'integrated'
+token.dep_ = 'aux'
+
+TOKEN: becoming
+=====
+token.tag_ = 'VBG'
+token.head.text = 'integrated'
+token.dep_ = 'auxpass'
+
+TOKEN: increasingly
+=====
+token.tag_ = 'RB'
+token.head.text = 'integrated'
+token.dep_ = 'advmod'
+
+TOKEN: integrated
+=====
+token.tag_ = 'VBN'
+token.head.text = 'integrated'
+token.dep_ = 'ROOT'
+
+TOKEN: into
+=====
+token.tag_ = 'IN'
+token.head.text = 'integrated'
+token.dep_ = 'prep'
+
+TOKEN: our
+=====
+token.tag_ = 'PRP$'
+token.head.text = 'lives'
+token.dep_ = 'poss'
+
+TOKEN: daily
+=====
+token.tag_ = 'JJ'
+token.head.text = 'lives'
+token.dep_ = 'amod'
+
+TOKEN: lives
+=====
+token.tag_ = 'NNS'
+token.head.text = 'into'
+token.dep_ = 'pobj'
+
+TOKEN: .
+=====
+token.tag_ = '.'
+token.head.text = 'integrated'
+token.dep_ = 'punct'
+
+TOKEN:
+
+=====
+token.tag_ = '_SP'
+token.head.text = '.'
+token.dep_ = 'dep'
+
+Using the 'dep' visualizer
+Serving on http://0.0.0.0:5000 ...
